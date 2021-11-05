@@ -1,0 +1,20 @@
+{
+  "name": "cendana-seed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "csv-reader": "^1.0.8",
+    "date-fns": "^2.22.1",
+    "knex": "^0.95.10",
+    "lodash": "^4.17.21",
+    "node-cmd": "^5.0.0",
+    "pg": "^8.7.1"
+  }
+}
