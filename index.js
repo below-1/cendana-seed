@@ -11,9 +11,9 @@ async function main() {
     const currentUser = await admin()
     await inventory()
     await customer()
+    await equityChange({ authorId: currentUser.id })
 
     await snapshotStart({ authorId: currentUser.id })
-    await equityChange({ authorId: currentUser.id })
     
     await opex({ authorId: currentUser.id })
     await sale({ authorId: currentUser.id })
