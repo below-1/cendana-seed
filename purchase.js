@@ -101,7 +101,7 @@ module.exports = async function ({ authorId }) {
       // process.exit(0)
     }
 
-    if (productName) {
+    if (supplierName) {
       // Create order as starting point
       // console.log(format(lastTanggal, 'yyyy-MM-dd HH:mm:ss'))
       // console.log()
