@@ -14,12 +14,16 @@ async function main() {
     await equityChange({ authorId: currentUser.id })
 
     await snapshotStart({ authorId: currentUser.id })
+    // console.log('here')
     
     await opex({ authorId: currentUser.id })
     await sale({ authorId: currentUser.id })
     await snapshotEnd({ authorId: currentUser.id })
   } catch (err) {
-    console.log(err)
+    if (err.response) {
+      console.log(err.response)
+      // console.log(`error in ${err.response}`)
+    }
     process.exit(1)
   }
 }

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cd ..
+dropdb -U postgres cendana_db
+cd cendana-server
+npx prisma db push
+npx prisma generate
+npm run start:dev

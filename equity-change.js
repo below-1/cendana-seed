@@ -2,6 +2,7 @@ const fs = require('fs')
 const knex = require('./knex')
 
 module.exports = async ({ authorId }) => {
+  const initialAmount = 50000000
   await knex.insert({
     id: 1,
     user: 'Admin Zero',
@@ -14,9 +15,13 @@ module.exports = async ({ authorId }) => {
     type: 'CREDIT',
     status: 'SUCCESS',
     paymentMethod: 'ONLINE',
-    nominal: 50000000,
+    nominal: initialAmount,
     description: 'Penambahan modal',
     equityChangeId: 1
   }).into('Transaction')
-  
+  await knex.insert({
+    id: 1,
+    createdAt: '2015-01-15',
+    nominal: initialAmount
+  }).into('RecordEquity')
 }
