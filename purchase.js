@@ -69,7 +69,7 @@ module.exports = async function ({ authorId }) {
     if (_temp2) {
       unit = _temp2
     }
-    const quantity = parseInt(row[4])
+    const quantity = parseInt(_temp1)
 
     if (supplierName) {
       supplier = suppliers.find(c => c.name == supplierName)
@@ -101,19 +101,19 @@ module.exports = async function ({ authorId }) {
       // process.exit(0)
     }
 
-    if (productName && productName != '') {
+    if (productName) {
       // Create order as starting point
       // console.log(format(lastTanggal, 'yyyy-MM-dd HH:mm:ss'))
       // console.log()
       try {
-        console.log(`PURCHASES: creating purchase at ${lastTanggal}`)
+        // console.log(`PURCHASES: creating purchase at ${lastTanggal}`)
         const orderResponse = await api.post('/v1/api/purchases', {
           description: '',
           authorId: 1,
           targetUserId,
           createdAt: lastTanggal.toISOString()
         })
-        console.log(orderResponse)
+        // console.log(orderResponse)
         order = orderResponse.data
       } catch (err) {
         console.log(err)
@@ -122,7 +122,7 @@ module.exports = async function ({ authorId }) {
       }
     }
     if (!product) {
-      console.log(`PURCHASES: creating ${productName}`)
+      // console.log(`PURCHASES: creating ${productName}`)
       // process.exit(1)
       const productResponse = await api.post('/v1/api/products', {
         name: productName,
@@ -133,7 +133,7 @@ module.exports = async function ({ authorId }) {
     }
 
     // Add order item
-    console.log(`PURCHASES: add stock-item`)
+    // console.log(`PURCHASES: add stock-item`)
     await api.post('/v1/api/stock-items', {
       orderId: order.id,
       authorId,

@@ -20,7 +20,6 @@ module.exports = async ({ authorId }) => {
     equityChangeId: 1
   }).into('Transaction')
   await knex.insert({
-    id: 1,
     createdAt: '2015-01-15',
     nominal: initialAmount
   }).into('RecordEquity')
