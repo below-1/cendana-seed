@@ -44,7 +44,7 @@ async function loadProducts() {
   return products
 }
 
-module.exports = async function ({ authorId }) {
+async function import_data({ authorId }) {
   const products = await loadProducts()
   const suppliers = await loadSuppliers()
   const data = await readData(FILENAME)
@@ -64,7 +64,10 @@ module.exports = async function ({ authorId }) {
     const productName = row[2].toLowerCase()
     let product = products.find(it => it.name == productName)
     let unit = 'pcs'
-    const buyPrice = parseInt(row[3].split('/')[0].replace('.', ''))
+    const buyPrice = parseInt(row[3].replace(',', ''))
+    // console.log(row[3].replace(',', ''))
+    // console.log(buyPrice)
+    // throw new Error('stop')
     const [ _temp1, _temp2 ] = row[4].split(' ')
     if (_temp2) {
       unit = _temp2
@@ -79,7 +82,7 @@ module.exports = async function ({ authorId }) {
       targetUserId = supplier.id
     }
 
-    if (order) {
+    if (order && supplierName) {
       // New order, save previous order
       const currentOrderStateResponse = await api.get('/v1/api/purchases/' + order.id)
       const currentOrderState = currentOrderStateResponse.data
@@ -88,11 +91,12 @@ module.exports = async function ({ authorId }) {
       // console.log(nominal)
       try {
         await api.put(`/v1/api/purchases/${order.id}/seal`, {
-          authorId: 1,
+          authorId,
           nominal,
           status: 'SUCCESS',
           paymentMethod: 'CASH'
         })
+        order = null
       } catch (err) {
         console.log(err)
         console.log('error sealing sale')
@@ -106,7 +110,6 @@ module.exports = async function ({ authorId }) {
       // console.log(format(lastTanggal, 'yyyy-MM-dd HH:mm:ss'))
       // console.log()
       try {
-        // console.log(`PURCHASES: creating purchase at ${lastTanggal}`)
         const orderResponse = await api.post('/v1/api/purchases', {
           description: '',
           authorId: 1,
@@ -146,4 +149,18 @@ module.exports = async function ({ authorId }) {
       quantity
     })
   }
+  const currentOrderStateResponse = await api.get('/v1/api/purchases/' + order.id)
+  const currentOrderState = currentOrderStateResponse.data
+  nominal = currentOrderState.grandTotal
+  await api.put(`/v1/api/purchases/${order.id}/seal`, {
+    authorId,
+    nominal,
+    status: 'SUCCESS',
+    paymentMethod: 'CASH'
+  })
+  console.log('done')
 }
+
+// import_data({ authorId: 1 })
+
+module.exports = import_data

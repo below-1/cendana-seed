@@ -63,11 +63,12 @@ module.exports = async function ({ authorId }) {
   let customer
   let order = null
   let nominal
+  let rowIndex = 0;
 
   for (let row of data) {
     let dateString = row[0]
     if (dateString) {
-      lastTanggal = parse(dateString, 'dd-MM-yyyy', new Date())
+      lastTanggal = parse(dateString, 'yyyy-MM-dd', new Date())
     }
 
     const productName = row[4].toLowerCase()
@@ -109,7 +110,7 @@ module.exports = async function ({ authorId }) {
       // console.log(format(lastTanggal, 'yyyy-MM-dd HH:mm:ss'))
       // console.log()
       try {
-        console.log(lastTanggal)
+        // console.log(lastTanggal)
         const orderResponse = await api.post('/v1/api/sales', {
           description: '',
           authorId: 1,
@@ -137,6 +138,17 @@ module.exports = async function ({ authorId }) {
       discount: 0,
       sellPrice
     })
+    rowIndex += 1;
   }
+
+  const currentOrderStateResponse = await api.get('/v1/api/sales/' + order.id)
+  const currentOrderState = currentOrderStateResponse.data
+  nominal = currentOrderState.grandTotal
+  await api.put(`/v1/api/sales/${order.id}/seal`, {
+    authorId: 1,
+    nominal,
+    status: 'SUCCESS',
+    paymentMethod: 'CASH'
+  })
   console.log('done')
 }
