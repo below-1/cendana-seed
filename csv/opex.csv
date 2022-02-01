@@ -1,45 +1,41 @@
-tanggal,kategori,nominal,keterangan
-01/04/21,Pembayaran Bensin Kendaraan,"10,000",Bensin Motor
-01/05/21,Pembayaran Bensin Kendaraan,"10,000",Bensin Motor
-01/05/21,Pembayaran Bensin Kendaraan,"165,000",Bensin Mobil
-01/06/21,Pembayaran Bensin Kendaraan,"10,000",Bensin Motor
-01/07/21,Pembayaran Bensin Kendaraan,"10,000",Bensin Motor
-01/08/21,Pembayaran Bensin Kendaraan,"10,000",Bensin Motor
-01/08/21,Pembayaran Bensin Kendaraan,"165,000",Bensin Mobil
-01/08/21,Pembayaran BPJS Kesehatan,"203,250",BPJS Kesehatan
-01/08/21,Pembayaran BPJS Kesehatan,"63,000",BPJS Kesehatan
-01/09/21,Pembayaran Lainnya,"160,000",Pembayaran Plat Motor Mio
-01/09/21,Pembayaran Bensin Kendaraan,"10,000",Bensin Motor
-01/09/21,Pembayaran PDAM,"22,500",Pembayaran PDAM Kabupaten
-01/11/21,Pembayaran Bensin Kendaraan,"10,000",Bensin Motor
-01/11/21,Pembayaran Lainnya,"50,000",Pengisian OVO
-01/12/21,Pembayaran Bensin Kendaraan,"10,000",Bensin Motor
-01/12/21,Pembayaran Bensin Kendaraan,"165,000",Bensin Mobil
-01/13/21,Pembayaran Bensin Kendaraan,"10,000",Bensin Motor
-01/14/21,Pembayaran Bensin Kendaraan,"165,000",Bensin Mobil
-01/15/21,Pembayaran Bensin Kendaraan,"10,000",Bensin Motor
-01/16/21,Pembayaran Bensin Kendaraan,"10,000",Bensin Motor
-01/16/21,Pembayaran Bensin Kendaraan,"165,000",Bensin Mobil
-01/18/21,Pembayaran Bensin Kendaraan,"10,000",Bensin Motor
-01/18/21,Pembayaran KIR Kendaran,"152,500",KIR Mobil
-01/18/21,Pembayaran Ekspedisi,"180,000",Pembayaran Ekspedisi
-01/19/21,Pembayaran Bensin Kendaraan,"10,000",Bensin Motor
-01/19/21,Pembayaran Bensin Kendaraan,"165,000",Bensin Mobil
-01/20/21,Pembayaran Indihome,"412,500",Pembayaran Indihome
-01/20/21,Pembayaran Bensin Kendaraan,"10,000",Bensin Motor
-01/21/21,Pembayaran Bensin Kendaraan,"10,000",Bensin Motor
-01/21/21,Service Kendaraan,"100,000",Service Motor Supra
-01/22/21,Pembayaran Bensin Kendaraan,"10,000",Bensin Motor
-01/22/21,Pembayaran Bensin Kendaraan,"165,000",Bensin Mobil
-01/23/21,Pembelian Peralatan Usaha,"120,000",Pembelian Spidol dan Nota Tulis
-01/23/21,Pembayaran Bensin Kendaraan,"10,000",Bensin Motor
-01/25/21,Pembayaran Bensin Kendaraan,"10,000",Bensin Motor
-01/26/21,Pembayaran Bensin Kendaraan,"10,000",Bensin Motor
-01/26/21,Pembayaran Bensin Kendaraan,"165,000",Bensin Mobil
-01/27/21,Pembayaran Bensin Kendaraan,"10,000",Bensin Motor
-01/28/21,Pembayaran Bensin Kendaraan,"10,000",Bensin Motor
-01/29/21,Pembayaran Ekspedisi,"79,000",Pembayaran Ekspedisi
-01/29/21,Pembayaran Bensin Kendaraan,"10,000",Bensin Motor
-01/29/21,Pembayaran Bensin Kendaraan,"165,000",Bensin Mobil
-01/30/21,Pembayaran Bensin Kendaraan,"10,000",Bensin Motor
-01/30/21,Pembayaran Gaji Pegawai,"1286000",Pembayaran Gaji Pegawai Anis dan Windy
+"tanggal","kategori","nominal","keterangan"
+"01/04/21","Pembayaran Bensin Kendaraan",10000,"Bensin Motor"
+"01/05/21","Pembayaran Bensin Kendaraan",10000,"Bensin Motor"
+"01/05/21","Pembayaran Bensin Kendaraan",165000,"Bensin Mobil"
+"01/06/21","Pembayaran Bensin Kendaraan",10000,"Bensin Motor"
+"01/07/21","Pembayaran Bensin Kendaraan",10000,"Bensin Motor"
+"01/08/21","Pembayaran Bensin Kendaraan",10000,"Bensin Motor"
+"01/08/21","Pembayaran Bensin Kendaraan",165000,"Bensin Mobil"
+"01/08/21","Pembayaran BPJS Kesehatan",63000,"BPJS Kesehatan"
+"01/09/21","Pembayaran Lainnya",160000,"Pembayaran Plat Motor Mio"
+"01/09/21","Pembayaran Bensin Kendaraan",10000,"Bensin Motor"
+"01/09/21","Pembayaran PDAM",22500,"Pembayaran PDAM Kabupaten"
+"01/11/21","Pembayaran Bensin Kendaraan",10000,"Bensin Motor"
+"01/12/21","Pembayaran Bensin Kendaraan",10000,"Bensin Motor"
+"01/13/21","Pembayaran Bensin Kendaraan",10000,"Bensin Motor"
+"01/14/21","Pembayaran Bensin Kendaraan",165000,"Bensin Mobil"
+"01/15/21","Pembayaran Bensin Kendaraan",10000,"Bensin Motor"
+"01/16/21","Pembayaran Bensin Kendaraan",10000,"Bensin Motor"
+"01/16/21","Pembayaran Bensin Kendaraan",165000,"Bensin Mobil"
+"01/18/21","Pembayaran Bensin Kendaraan",10000,"Bensin Motor"
+"01/18/21","Pembayaran KIR Kendaran",152500,"KIR Mobil"
+"01/18/21","Pembayaran Ekspedisi",180000,"Pembayaran Ekspedisi"
+"01/19/21","Pembayaran Bensin Kendaraan",10000,"Bensin Motor"
+"01/19/21","Pembayaran Bensin Kendaraan",165000,"Bensin Mobil"
+"01/20/21","Pembayaran Indihome",412500,"Pembayaran Indihome"
+"01/20/21","Pembayaran Bensin Kendaraan",10000,"Bensin Motor"
+"01/21/21","Pembayaran Bensin Kendaraan",10000,"Bensin Motor"
+"01/21/21","Service Kendaraan",100000,"Service Motor Supra"
+"01/22/21","Pembayaran Bensin Kendaraan",10000,"Bensin Motor"
+"01/22/21","Pembayaran Bensin Kendaraan",165000,"Bensin Mobil"
+"01/22/21","Pembayaran Listrik",200000,
+"01/23/21","Pembayaran Bensin Kendaraan",10000,"Bensin Motor"
+"01/25/21","Pembayaran Bensin Kendaraan",10000,"Bensin Motor"
+"01/26/21","Pembayaran Bensin Kendaraan",10000,"Bensin Motor"
+"01/26/21","Pembayaran Bensin Kendaraan",165000,"Bensin Mobil"
+"01/27/21","Pembayaran Bensin Kendaraan",10000,"Bensin Motor"
+"01/28/21","Pembayaran Bensin Kendaraan",10000,"Bensin Motor"
+"01/29/21","Pembayaran Ekspedisi",79000,"Pembayaran Ekspedisi"
+"01/29/21","Pembayaran Bensin Kendaraan",10000,"Bensin Motor"
+"01/30/21","Pembayaran Bensin Kendaraan",10000,"Bensin Motor"
+"01/30/21","Pembayaran Gaji Pegawai",1286000,"Pembayaran Gaji Pegawai Anis dan Windy"

@@ -65,6 +65,7 @@ async function import_data({ authorId }) {
     let product = products.find(it => it.name == productName)
     let unit = 'pcs'
     const buyPrice = parseInt(row[3].replace(',', ''))
+    const sellPrice = parseInt(row[5].replace(',', ''))
     // console.log(row[3].replace(',', ''))
     // console.log(buyPrice)
     // throw new Error('stop')
@@ -143,7 +144,7 @@ async function import_data({ authorId }) {
       productId: product.id,
       discount: 0,
       buyPrice,
-      sellPrice: buyPrice + 1500,
+      sellPrice,
       available: quantity,
       defect: 0,
       quantity
